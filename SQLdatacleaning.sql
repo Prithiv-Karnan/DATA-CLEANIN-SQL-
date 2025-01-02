@@ -74,19 +74,19 @@ ALTER TABLE NashvilleHousing
 ADD ownerspilitAddress Nvarchar(255);
 
 Update NashvilleHousing
-SET propertyspilitAddress = PARSENAME(REPLACE(OwnerAddress,',','-'),3)
+SET ownerspilitAddress = PARSENAME(REPLACE(OwnerAddress,',','-'),3)
 
 ALTER TABLE NashvilleHousing
 ADD ownerspilitCity Nvarchar(255);
 
 Update NashvilleHousing
-SET propertyspilitCity = PARSENAME(REPLACE(OwnerAddress,',','-'),2)
+SET ownerspilitCity = PARSENAME(REPLACE(OwnerAddress,',','-'),2)
 
 ALTER TABLE NashvilleHousing
 ADD ownerspilitState Nvarchar(255);
 
 Update NashvilleHousing
-SET propertyspilitState = PARSENAME(REPLACE(OwnerAddress,',','-'),1)
+SET ownerspilitState = PARSENAME(REPLACE(OwnerAddress,',','-'),1)
 
 
 --change Y and NO in 'sold as value'field
